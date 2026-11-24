@@ -13,7 +13,7 @@ import "Schedule.js" as Schedule
 // ~/.config/omarchy/brightness-schedule.json, which is watched, so hand
 // edits apply live.
 //
-// Off means hands off: brightness is left wherever you put it.
+// Switching it off sets brightness to 100%; after that it's hands off.
 // A manual change while it is on (panel slider or brightness keys) holds
 // until the next schedule point, then the schedule takes over again.
 Item {
@@ -44,11 +44,13 @@ Item {
 
   function toggle() { setEnabled(!enabled) }
 
+  // Turning the schedule off hands brightness back at full: 100%.
   function setEnabled(value) {
     scheduleEnabled = !!value
     override = null
     appliedValue = -1
     saveSoon()
+    if (!scheduleEnabled) apply(Schedule.NEUTRAL_VALUE)
     tick()
   }
 

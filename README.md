@@ -6,7 +6,7 @@ Omarchy's Display panel with a 24-hour **brightness schedule** added, so the scr
 
 ## Features
 
-- **Schedule switch** in the panel header turns the schedule on or off, and is remembered across reboots. With it off, the panel behaves exactly like the stock one.
+- **Schedule switch** in the panel header turns the schedule on or off, and is remembered across reboots. Switching it off sets brightness back to 100%; after that the panel behaves exactly like the stock one.
 - **Timeline and editor** work the same as the [Night Light Schedule](https://github.com/Albertus-de-Klerk/omarchy-nightlight-schedule) plugin:
   - Add as many points as you like; each one *arrives* by **Jump**, **Fade** (1% steps) or **Steps** every *N* minutes.
   - **Edit** opens the editor and turns into **Save** in the same spot.

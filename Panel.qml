@@ -697,7 +697,11 @@ Panel {
               foreground: root.foreground
               anchors.right: parent.right
               anchors.verticalCenter: parent.verticalCenter
-              onToggled: if (root.schedule) root.schedule.toggle()
+              onToggled: {
+                if (!root.schedule) return
+                if (root.scheduleOn) root.brightnessPercent = 100   // switching off resets to full
+                root.schedule.toggle()
+              }
 
               PanelToolTip {
                 visible: scheduleSwitch.containsMouse
