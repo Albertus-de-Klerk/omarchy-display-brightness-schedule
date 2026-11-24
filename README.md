@@ -41,3 +41,11 @@ Omarchy 4.5+ and a display whose brightness `omarchy brightness display` can set
 ## Development
 
 `node tests/schedule.test.js` runs the schedule maths tests.
+
+## Remove
+
+```bash
+omarchy plugin remove albertus.monitor
+omarchy plugin enable omarchy.monitor
+omarchy restart shell
+```
